@@ -9,7 +9,7 @@ public class Calculator {
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> devide = (x, y) -> {
-        if (y == 0) return x;
+        if (y == 0) return Integer.MIN_VALUE;
         return x / y;
     };
     UnaryOperator<Integer> pow = x -> x * x;
